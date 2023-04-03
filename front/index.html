@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>XScan[MainNet]</title>
+    <!-- Favicon icon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon.png"
+    />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./vendor/toastr/toastr.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.1-rc.0/web3.min.js"
+      integrity="sha512-Ui9NE+/XdhwxssTrWetwWgpwpZJCLgTpB2dgkq+xe3O7lmZEJe+2rw3OT3YbYIUCQWH5dOO8ObLOYmbUVpPBgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.33.1/apexcharts.min.css"
+      integrity="sha512-72LrFm5Wau6YFp7GGd7+qQJYkzRKj5UMQZ4aFuEo3WcRzO0xyAkVjK3NEw8wXjEsEG/skqvXKR5+VgOuzuqPtA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.7/dayjs.min.js"
+      integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .hash-tag {
+        max-width: 350px;
+        vertical-align: bottom;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .token {
+        text-align: right;
+      }
+      .blockListEle {
+        /* margin-top: 15px !important;
+        margin-bottom: 15px !important;
+        padding-bottom: 10px !important; */
+        padding: 19px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+      </div>
+    </div>
+
+    <div id="main-wrapper">
+      <div class="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <nav class="navbar">
+                <div class="header-search d-flex align-items-center">
+                  <a class="brand-logo me-3" href="index.html">
+                    <img src="./images/logo.png" alt="" width="30" />
+                  </a>
+                  <!-- <form action="#">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search"
+                      />
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2"
+                          ><i class="fa fa-search"></i
+                        ></span>
+                      </div>
+                    </div>
+                  </form> -->
+                </div>
+
+                <div class="dashboard_log">
+                  <div class="d-flex align-items-center">
+                    <h6 style="margin: 0 8px 0px 0">Main Net</h6>
+                    <div class="profile_log dropdown">
+                      <div class="user" data-toggle="dropdown">
+                        <span class="thumb"
+                          ><i class="mdi mdi-network"></i
+                        ></span>
+                        <!-- <span class="name">Carla Pascle</span> -->
+                        <span class="arrow"
+                          ><i class="la la-angle-down"></i
+                        ></span>
+                      </div>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="http://xscan.xrun.run" class="dropdown-item">
+                          Main Net
+                        </a>
+                        <a
+                          href="http://testnet.xscan.xrun.run/"
+                          class="dropdown-item"
+                        >
+                          Test Net
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <a class="brand-logo" href="index.html">
+          <img style="margin: 0 auto" src="./images/logo.png" alt="" />
+          <span style="text-align: center">XRUN </span></a
+        >
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="index.html">
+                <span><i class="mdi mdi-view-dashboard"></i></span>
+                <span class="nav-text">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="fa fa-shopping-cart"></i></span>
+                <span class="nav-text">NFT Market</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="mdi mdi-account"></i></span>
+                <span class="nav-text">Metaverse</span>
+              </a>
+            </li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="sidebar-footer">
+          <div class="social">
+            <a target="_blank" href="https://twitter.com/FoundationXrun">
+              <img
+                style="width: 20px; height: 20px"
+                src="./images/social_Twitter_38.png"
+                alt=""
+              />
+            </a>
+            <a target="_blank" href="https://www.facebook.com/XRUNFOUNDATION/">
+              <img
+                style="width: 20px; height: 20px"
+                src="./images/social_facebook_fb_35.png"
+                alt=""
+              />
+            </a>
+            <a
+              target="_blank"
+              href="https://instagram.com/xrun_world?utm_medium=copy_link"
+            >
+              <img
+                style="width: 20px; height: 20px"
+                src="./images/instagram_black_logo_icon_147122.png"
+                alt=""
+              />
+            </a>
+            <a target="_blank" href="https://blog.naver.com/xrunfoundation">
+              <img
+                style="width: 20px; height: 20px"
+                src="./images/naver_icon-icons.com_59879.png"
+                alt=""
+              />
+            </a>
+            <a target="_blank" href="https://t.me/xrunmetaverseNFT ">
+              <img
+                style="width: 20px; height: 20px"
+                src="./images/telegram_black_logo_icon_147073.png"
+                alt=""
+              />
+            </a>
+            <div class="copy_right">
+              ©
+              <script>
+                var CurrentYear = new Date().getFullYear();
+                document.write(CurrentYear);
+              </script>
+              XRUN
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page_title">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="page_title-content" id="mainTitle">
+                <p>
+                  Welcome XScan Site [ MainNet ]
+                  <!-- <span> Carla Pascle</span> -->
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-12">
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-xxl-12">
+                  <div class="row">
+                    <div class="col-xl-4 col-lg-12 col-xxl-12">
+                      <div class="widget-card">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <div class="widget-stat">
+                            <div class="coin-title">
+                              <!-- <span><i class="cc BTC-alt"></i></span> -->
+                              <h5 class="d-inline-block ms-2 mb-3">
+                                XRUN PRICE
+                              </h5>
+                              <span> [1 HOUR]</span>
+                            </div>
+                            <div id="HourChart"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-xxl-12">
+                      <div class="widget-card">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <div class="widget-stat">
+                            <div class="coin-title">
+                              <h5 class="d-inline-block ms-2 mb-3">
+                                XRUN PRICE
+                              </h5>
+                              <span> [1 DAY]</span>
+                            </div>
+                            <div id="DayChart"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-xxl-12">
+                      <div class="widget-card">
+                        <div
+                          class="d-flex justify-content-between align-items-center"
+                        >
+                          <div class="widget-stat">
+                            <div class="coin-title">
+                              <h5 class="d-inline-block ms-2 mb-3">
+                                XRUN PRICE
+                              </h5>
+                              <span>[ 1 WEEK ]</span>
+                            </div>
+                            <div id="WeekChart"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 0530 Digiginax Chart -->
+            <!-- <div class="col-xl-12 col-lg-12 col-xxl-8">
+              <div class="card profile_chart transparent">
+                <div class="card-body">
+                  <div id="MainChart"></div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-xl-12">
+              <div class="row">
+                <!--end 0209 지갑 교환 관련 -->
+                <!--start 0209 블록 리스트  -->
+                <div class="col-xl-6 col-lg-12 col-xxl-8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Latest Blocks</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="transaction-widget">
+                        <ul class="list-unstyled" id="latestBlocks">
+                          <h4 class="card-title" id="blockListLoad">
+                            Loading....
+                          </h4>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end 0209 블록 리스트  -->
+                <!--start 0209 트랜잭션 리스트  -->
+                <div class="col-xl-6 col-lg-12 col-xxl-8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title">Latest Transactions</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="transaction-widget">
+                        <ul class="list-unstyled" id="latestTransactions">
+                          <h4 class="card-title" id="transactionListLoad">
+                            Loading....
+                          </h4>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--end 0209 트랜잭션 리스트  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./vendor/toastr/toastr.min.js"></script>
+    <script src="./vendor/toastr/toastr-init.js"></script>
+
+    <script src="./vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="./vendor/circle-progress/circle-progress-init.js"></script>
+
+    <!--  flot-chart js -->
+    <script src="./vendor/apexchart/apexcharts.min.js"></script>
+    <script src="./js/src/apexchart-init-digifinex.js"></script>
+    <!-- <script src="./vendor/apexchart/apexchart-init.js"></script> -->
+    <script src="./vendor/apexchart/apexchart2-init.js"></script>
+    <script src="./js/scripts.js"></script>
+
+    <!-- 0209kym -->
+    <script src="./js/src/web3_mehod.js"></script>
+
+    <script src="./js/src/WSocket.js"></script>
+    <script src="./js/src/main.js"></script>
+  </body>
+</html>
