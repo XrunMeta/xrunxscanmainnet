@@ -1,0 +1,26 @@
+.demo_img {
+    text-align   : center;
+    margin-bottom: 60px;
+
+    .img-wrap {
+        // max-height: 175px;
+        overflow     : hidden;
+        margin-bottom: 30px;
+        box-shadow   : 0px 10px 20px rgba(31, 66, 135, 0.2);
+        background   : #fff;
+        padding      : 10px;
+        border-radius: 15px;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+}
+
+.intro-img {
+    box-shadow   : 0px 10px 20px rgba(31, 66, 135, 0.2);
+    background   : #fff;
+    padding      : 10px;
+    border-radius: 15px;
+
+}

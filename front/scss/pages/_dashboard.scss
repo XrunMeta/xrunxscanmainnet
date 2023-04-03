@@ -1,0 +1,270 @@
+.widget-card {
+  background: $white;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-shadow: 0px 10px 20px rgba(55, 55, 89, 0.08);
+
+  .widget-stat {
+    min-width: 180px;
+    // padding  : 20px 0;
+
+    h5 {
+      // color: $body-color;
+    }
+
+    i {
+      font-size: 24px;
+      // color: #fff;
+    }
+  }
+
+  .widget-title,
+  .widget-info {
+    display: flex;
+    justify-content: space-between;
+
+    h5 {
+      color: $body-color;
+    }
+  }
+}
+
+.profile_chart {
+  &.card {
+    .card-header {
+      border: 0px;
+
+      // padding-bottom: 0px;
+      @include respond("phone-land") {
+        flex-direction: column;
+      }
+
+      .duration-option {
+        box-shadow: 0px 36px 48px rgba(31, 66, 135, 0.04);
+
+        a {
+          display: inline-block;
+          margin-left: 10px;
+          text-align: center;
+          padding: 5px 10px;
+          border: 1px solid $border-color;
+          // float: left;
+          transition: all 0.3s ease;
+          font-weight: 500;
+          border-radius: 5px;
+
+          // color: $white;
+          &:hover,
+          &:focus,
+          &.active {
+            background: $primary;
+            color: $white;
+            border-right: 1px solid transparent;
+          }
+
+          // &:first-child {
+          //     border-top-left-radius: 25px;
+          //     border-bottom-left-radius: 25px;
+          // }
+          // &:last-child {
+          //     border: 0px;
+          // }
+        }
+      }
+    }
+
+    .card-body {
+      // padding: 10px 45px 30px;
+      .chart_current_data {
+        min-width: 165px;
+        border-radius: 16px;
+        background: $white;
+        padding: 13px 20px;
+        display: inline-block;
+        margin-bottom: 40px;
+
+        h3 {
+          font-size: 36px;
+          color: $primary;
+          margin-bottom: 0px;
+          line-height: 43px;
+        }
+
+        p {
+          margin-bottom: 0px;
+          font-size: 14px;
+          font-weight: 500;
+          color: $headings-color;
+        }
+      }
+    }
+  }
+}
+
+.chart-stat {
+  background: transparent;
+  border-radius: 15px;
+  padding: 15px 15px;
+  margin-bottom: 15px;
+  border: 1px solid $border-color;
+
+  @include custommq($min: 1200px, $max: 1350px) {
+    padding: 15px 7px;
+  }
+
+  h5 {
+    margin-bottom: 5px;
+  }
+}
+
+.transaction-widget {
+  li {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    align-items: center;
+
+    @include respond("phone") {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &:last-child {
+      border: 0px;
+      padding-bottom: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  p {
+    margin-bottom: 0px;
+
+    @include respond("phone") {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.sold-thumb {
+  background: $danger;
+  color: $white;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+
+  @include respond("phone") {
+    margin-bottom: 10px;
+  }
+
+  i {
+    font-weight: 700;
+    // font-size: 18px;
+  }
+}
+
+.buy-thumb {
+  background: $success;
+  color: $white;
+  border-radius: 15px;
+  // width: 30px;
+  height: 18vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+
+  @include respond("phone") {
+    margin-bottom: 10px;
+  }
+
+  i {
+    font-weight: 700;
+    // font-size: 22px;
+  }
+}
+
+.balance-widget {
+  position: relative;
+
+  h4 {
+    position: absolute;
+    top: -45px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  ul {
+    li {
+      // padding      : 18px;
+      align-items: center;
+      border-bottom: 1px solid $border-color;
+      background: transparent;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+
+      &:last-child {
+        border: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.total-balance {
+  padding: 50px 0 35px;
+  text-align: center;
+}
+
+// Apps Download
+.apps-download {
+  background-image: url("./../images/app.png");
+  background-color: $primary;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $primary;
+    opacity: 0.95;
+    z-index: -1;
+    border-radius: 5px;
+  }
+
+  // .card-title {
+  //     color: $white;
+  // }
+}
+
+.apps-download-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 387px;
+
+  li {
+    color: $white;
+    margin-bottom: 15px;
+  }
+}

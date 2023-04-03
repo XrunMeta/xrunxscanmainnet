@@ -1,0 +1,58 @@
+//Footer
+.footer {
+    padding       : 30px 0;
+    background    : $white;
+    margin-left   : 0px;
+    // position   : fixed;
+    bottom        : 0;
+    left          : 0;
+    right         : 0;
+    z-index       : 02;
+
+    &.landing {
+        margin-left: 0px;
+        position   : relative;
+    }
+
+    @include respond('phone-land') {
+        position   : relative;
+        margin-left: 0px;
+    }
+}
+
+
+
+.footer-link {
+    @include respond('phone-land') {
+        text-align: center !important;
+    }
+
+    .m_logo {
+        margin-right: 15px;
+
+        @include respond('phone-land') {
+            margin-right : 5px;
+            text-align   : center;
+            display      : block;
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 30px;
+        }
+    }
+
+    a {
+        display      : inline-block;
+        font-size    : 14px;
+        padding-right: 10px;
+        color        : $text-muted;
+        font-weight  : 500;
+
+        &:hover,
+        &:focus,
+        &.active {
+            color: $primary;
+        }
+    }
+}

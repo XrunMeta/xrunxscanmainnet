@@ -1,0 +1,112 @@
+.buy-sell-widget {
+    .nav-tabs {
+        margin-bottom: 30px;
+        border: 0px;
+        .nav-item {
+            width: 50%;
+            text-align: center;
+            .nav-link {
+                padding: 15px 10px;
+                font-size: 18px;
+                text-transform: uppercase;
+                border: 0px;
+                font-weight: 700;
+                border-radius: 15px;
+                background: transparent;
+                border: 1px solid $border-color;
+                margin: 0px 15px;
+                &.active {
+                    background: $primary;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.buyer-seller {
+    .d-flex {
+        @include respond('phone-land') {
+            .buyer-info,
+            .seller-info {
+                padding: 10px;
+                img {
+                    display: none;
+                }
+            }
+        }
+        @include respond('phone-land') {
+            justify-content: flex-start;
+        }
+        @include respond('phone') {
+            flex-direction: column;
+            .seller-info {
+                text-align: left!important;
+            }
+        }
+    }
+}
+
+#accordion-faq {
+    margin-top: -15px;
+    .card {
+        margin-bottom: 0px;
+        border: 0px solid $border-color;
+        box-shadow: none;
+        .card-header {
+            border: 0px;
+            padding: 15px 10px;
+        }
+        .card-body {
+            padding: 15px 10px 10px;
+        }
+    }
+}
+
+.intro-video-play {
+    background-color: $white;
+    background-image: url('./../images/background/2.jpg');
+    background-size: cover;
+    background-position: 0 0;
+    min-height: 465px;
+    // max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 15px;
+    z-index: 1;
+    margin-bottom: 30px;
+    box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.1);
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #423A6F;
+        opacity: 0.65;
+        border-radius: 5px;
+        z-index: -1;
+    }
+}
+
+.play-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    a {
+        background: $white;
+        width: 75px;
+        height: 75px;
+        border-radius: 100px;
+        padding: 27px 0;
+        text-align: center;
+        cursor: pointer;
+        i {
+            color: $primary;
+        }
+    }
+}

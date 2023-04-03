@@ -1,0 +1,247 @@
+.section-padding {
+    padding: 100px 0;
+
+    @include respond('tab-land') {
+        padding: 80px 0;
+    }
+
+    @include respond('tab-port') {
+        padding: 75px 0;
+    }
+
+    @include respond('phone-land') {
+        padding: 60px 0;
+    }
+
+    @include respond('phone') {
+        padding: 50px 0;
+    }
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+.mb-80 {
+    margin-bottom: 80px;
+}
+
+.bg_icons {
+    display               : flex;
+    flex-wrap             : wrap;
+    position              : fixed;
+    overflow              : hidden;
+    z-index               : 0;
+    left                  : 0;
+    right                 : 0;
+    top                   : 0;
+    bottom                : 0;
+    // background         : url('./../images/background/bg_icons.jpg');
+    background-size       : cover;
+    background-position   : center;
+    background            : rgba(58, 51, 97, 0.95);
+}
+
+.page_title {
+    padding       : 15px 0px 15px;
+    position      : relative;
+    background    : transparent;
+    // margin-top : 80px;
+    margin-left   : 240px;
+
+    @include respond('phone-land') {
+        margin-left: 0;
+    }
+
+    p {
+        font-size    : 18px;
+        font-weight  : 500;
+        margin-bottom: 0px;
+        color        : $primary;
+
+        // opacity: 0.6;
+        span {
+            line-height: 30px;
+            font-weight: 500;
+            color      : $headings-color;
+            margin-left: 10px;
+            opacity    : 1;
+        }
+    }
+}
+
+.breadcrumbs {
+    display        : flex;
+    justify-content: flex-end;
+
+    li {
+        a {
+            color      : $text-muted;
+            display    : inline-block;
+            margin-left: 15px;
+            font-size  : 14px;
+        }
+
+        &.active {
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+#toast-container {
+    top  : 100px;
+    right: 12%;
+
+    &>div:hover {
+        -moz-box-shadow: 0px;
+        box-shadow     : 0px;
+        cursor         : pointer;
+    }
+
+    .toast {
+        min-height     : 120px;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        padding-left   : 120px;
+        box-shadow     : none;
+        border-radius  : 24px;
+
+        &:hover {
+            -moz-box-shadow: 0px;
+            box-shadow     : 0px;
+        }
+    }
+
+    canvas {
+        position : absolute;
+        z-index  : 999;
+        top      : 50%;
+        transform: translateY(-50%);
+        left     : 20px;
+    }
+
+    .toast-message {
+        max-width: 300px;
+    }
+
+    .progress_count {
+        position  : absolute;
+        color     : $dark;
+        font-size : 18px;
+        left      : 36px;
+        text-align: center;
+        right     : 0;
+        width     : 50px;
+        height    : 100%;
+        top       : 50px;
+    }
+
+    .la-close {
+        position : absolute;
+        right    : 20px;
+        top      : 15px;
+        width    : 24px;
+        font-size: 24px;
+    }
+
+    a {
+        display      : inline-block;
+        width        : 115px;
+        padding      : 10px;
+        text-align   : center;
+        position     : absolute;
+        bottom       : 15px;
+        right        : 20px;
+        background   : #FFDEB0;
+        border-radius: 30px;
+        color        : $warning;
+    }
+}
+
+.toast-progress {
+    background: $warning;
+    opacity   : 6;
+}
+
+// Scrollbar 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow   : inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background   : #999;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+.section_heading {
+    position     : relative;
+    text-align   : center;
+    margin-bottom: 50px;
+
+    h3 {
+        font-size    : 30px;
+        line-height  : 45px;
+        margin-bottom: 10px;
+        color        : $headings-color;
+        font-weight  : 600;
+
+        @include respond('tab-land') {
+            font-size  : 26px;
+            line-height: 40px;
+        }
+
+        @include respond('tab-port') {
+            font-size  : 24px;
+            line-height: 30px;
+        }
+    }
+
+    span {
+        font-size    : 24px;
+        font-weight  : 500;
+        color        : $primary;
+        position     : relative;
+        margin-bottom: 30px;
+        display      : inline-block;
+
+        &::after {
+            content   : '';
+            position  : absolute;
+            left      : 0;
+            right     : 0;
+            width     : 50px;
+            height    : 2px;
+            background: $primary;
+            bottom    : -15px;
+            margin    : 0 auto;
+        }
+    }
+
+    p {
+        font-weight: normal;
+        font-size  : 18px;
+        line-height: 25px;
+        // color      : $white;s
+    }
+}

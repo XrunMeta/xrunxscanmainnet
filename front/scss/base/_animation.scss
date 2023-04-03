@@ -1,0 +1,207 @@
+[class*="ani-"] {
+  position: absolute;
+  z-index: -10;
+  @include respond("phone-land"){
+    display: none;
+  }
+}
+
+
+.ani-1 {
+  right: -3%;
+  top: 0;
+}
+
+.ani-2 {
+  right: 4%;
+  bottom: 34%;
+}
+
+.ani-3 {
+  left: 40%;
+  top: 20%;
+}
+
+.ani-4 {
+  left: 42%;
+  top: 7%;
+}
+
+.ani-5 {
+  left: -3%;
+  top: 7%;
+}
+
+.ani-6 {
+  right: 25%;
+  top: 10%;
+}
+
+.ani-7 {
+  right: 30%;
+  top: 23%;
+}
+
+.ani-8 {
+  right: 28%;
+  top: 30%;
+}
+
+// terms page
+.ani-9 {
+  left: 5%;
+  bottom: 32%;
+}
+
+.ani-10 {
+  left: 5%;
+  bottom: 30%;
+}
+
+.ani-11 {
+  left: 9%;
+  bottom: 30%;
+}
+
+// About
+
+.ani-12 {
+  top: 60%;
+
+  .a1 {
+    position: absolute;
+    left: 45px;
+    top: -80px;
+  }
+
+  .a2 {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+
+  .a3 {
+    position: absolute;
+    left: -25px;
+  }
+}
+
+
+// affiliate
+
+.ani-13 {
+  top: 50%;
+
+  img {
+    position: absolute;
+  }
+
+  .a1 {
+    left: -50px;
+  }
+
+  .a2 {
+    top: 160px;
+    left: -50px;
+  }
+
+  .a3 {
+    left: 53px;
+    top: 182px;
+  }
+
+  .a4 {
+    top: 90px;
+    left: 20px;
+  }
+}
+
+.ani-14 {
+  right: 6%;
+  top: 20%;
+}
+
+.ani-15 {
+  left: 18%;
+  bottom: -5%;
+}
+.ani-16 {
+  right: 0;
+  top: 60%;
+}
+
+
+
+
+// bug bunty
+
+
+// Leaderboard
+
+.ani-17{
+  right: 0;
+  top: 0;
+}
+
+.ani-18{
+  bottom: 0;
+  left: 0;
+}
+
+// shop
+
+.ani-19{
+  bottom: 12%;
+  left: 0
+}
+.ani-20{
+  right: 5%;
+  top: 10%
+}
+
+.ani-21{
+  right: 20%;
+  bottom: 25%;
+}
+
+.ani-24{
+  right: 45%;
+  bottom: 34%;
+}
+
+
+
+// Support
+
+.ani-22{
+  left: -20px;
+  top: 50%;
+}
+.ani-23{
+  right: -15px;
+  top: 60%;
+}
+
+// paypal, crypto, aws
+
+.ani-25{
+  right: -15px;
+  top: 30%;
+}
+.ani-26{
+  left: 0px;
+  top: 50%;
+}
+
+
+
+
+/* Custom animation start
+============================================================================================ */
+@media (max-width: 1200px) {
+
+  /* line 86, ../../Arafath/v6/262 Anne v3 - Copy/anne-html/anne/scss/_predefine.scss */
+  [class*="hero-ani-"] {
+    display: none !important;
+  }
+}

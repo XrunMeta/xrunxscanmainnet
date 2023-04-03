@@ -1,0 +1,345 @@
+// Intro
+.intro {
+    min-height         : 100vh;
+    position           : relative;
+    padding            : 100px 0;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    background         : url('./../images/background/bg.jpg');
+    background-size    : cover;
+    background-position: center;
+    z-index            : 1;
+
+    &:after {
+        z-index   : -1;
+        content   : '';
+        position  : absolute !important;
+        left      : 0;
+        right     : 0;
+        top       : 0;
+        bottom    : 0;
+        background: $white;
+        opacity   : 1;
+    }
+
+    .intro-content {
+        padding: 30px 0px;
+
+        h2 {
+            margin-bottom   : 50px;
+            font-weight     : 700;
+            // color        : $white;
+            font-size       : 48px;
+            line-height     : 60px;
+
+            @include respond('tab-land') {
+                font-size    : 42px;
+                line-height  : 50px;
+                margin-bottom: 30px;
+            }
+
+            @include respond('tab-port') {
+                font-size    : 36px;
+                line-height  : 40px;
+                margin-bottom: 25px;
+            }
+
+            @include respond('phone-land') {
+                font-size    : 30px;
+                line-height  : 35px;
+                margin-bottom: 20px;
+            }
+        }
+
+        p {
+            margin-bottom   : 40px;
+            font-size       : 20px;
+            line-height     : 36px;
+            // color        : $white;
+            max-width       : 500px;
+        }
+
+        .btn {
+            background   : $primary;
+            border-radius: 50px;
+            display      : inline-block;
+            min-width    : 150px;
+            font-size    : 18px;
+            font-weight  : 500;
+            padding      : 13px;
+            margin-right : 10px;
+
+            &:hover,
+            &:focus,
+            &:active,
+            &.active {
+                background: $primary;
+            }
+
+            @include respond('tab-land') {
+                font-size: 16px;
+                min-width: 180px;
+                padding  : 10px;
+            }
+
+            @include respond('tab-port') {
+                font-size: 15px;
+                min-width: 150px;
+                padding  : 10px;
+            }
+        }
+    }
+}
+
+// Market
+// .market {
+//     background: $white;
+// }
+
+.market-table {
+    table {
+        thead {
+            th {
+                border   : 0px;
+                font-size: 14px;
+            }
+        }
+
+        tbody {
+
+            td,
+            th {
+                border-color: $border-color;
+            }
+
+            .coin_icon {
+                i {
+                    font-size   : 30px;
+                    margin-right: 10px;
+                }
+
+                span {
+                    b {
+                        font-weight: 400;
+                        margin-left: 20px;
+                    }
+                }
+            }
+
+            .btn {
+                font-size: 14px;
+                padding  : 5px;
+                min-width: 59px;
+            }
+        }
+    }
+}
+
+.cookie_alert {
+
+    .alert {
+    border-radius: 15px;
+        margin-bottom: 0px;
+        position     : fixed;
+        max-width    : 385px;
+        left         : 15px;
+        right        : 0;
+        bottom       : 15px;
+        z-index      : 9999;
+        box-shadow   : 0 1.5rem 4rem rgba(47, 44, 216, 0.25);
+        padding      : 20px 30px;
+    }
+
+    p {
+        font-weight: 400;
+        color      : $headings-color;
+        line-height: 26px;
+
+        a {
+            color: $primary;
+        }
+    }
+
+    .btn {
+        padding: 7px
+    }
+}
+
+.testimonial-content {
+    background   : $white;
+    box-shadow   : 0 1.5rem 4rem rgba(22, 28, 45, .05);
+    border-radius: 5px;
+
+    .customer-review {
+        // img {
+        //     filter: brightness(100);
+        // }
+    }
+
+    .owl-carousel {
+        .owl-nav {
+
+            // position: relative;
+            .owl-prev {
+                position     : absolute;
+                left         : -29px;
+                top          : 50%;
+                transform    : translateY(-50%);
+                width        : 50px;
+                height       : 50px;
+                border-radius: 50px;
+                background   : $primary;
+                color        : $white;
+                font-size    : 18px;
+                min-width    : auto;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                }
+
+                @include respond('phone-land') {
+                    left: 15px;
+                }
+            }
+
+            .owl-next {
+                position     : absolute;
+                right        : -29px;
+                top          : 50%;
+                transform    : translateY(-50%);
+                width        : 50px;
+                height       : 50px;
+                border-radius: 50px;
+                background   : $primary;
+                color        : $white;
+                font-size    : 18px;
+                min-width    : auto;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                }
+
+                @include respond('phone-land') {
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+
+.customer-img {
+    img {
+        border-top-left-radius   : 5px;
+        border-bottom-left-radius: 5px;
+        position                 : relative;
+
+        &::before {
+            position: absolute;
+            content : '';
+        }
+    }
+}
+
+.customer-review {
+    img {
+        width        : auto !important;
+        margin-bottom: 30px;
+        margin-top   : 30px;
+    }
+
+    p {
+        margin-bottom: 30px;
+        padding-right: 30px;
+    }
+}
+
+.features-content {
+    text-align   : center;
+    background   : #fff;
+    padding      : 30px;
+    border-radius: 15px;
+    box-shadow   : 0px 10px 20px rgba(55, 55, 89, 0.08);
+
+    @include respond('phone-land') {
+        margin-bottom: 50px;
+    }
+
+    span {
+        i {
+            color    : $primary;
+            font-size: 36px;
+        }
+    }
+
+    h4 {
+        font-size    : 20px;
+        margin-top   : 30px;
+        margin-bottom: 15px;
+        text-overflow: ellipsis;
+        overflow     : hidden;
+        white-space  : nowrap;
+    }
+
+    p {
+        line-height: 27px;
+        max-width  : 350px;
+        margin     : 0 auto 30px;
+    }
+
+    a {
+        color    : $primary;
+        font-size: 14px;
+    }
+}
+
+// portfolio
+.portfolio_list {
+    // max-width: 500px;
+    margin-top: 100px;
+
+
+    .media {
+        margin-bottom: 40px;
+        background   : #fff;
+        padding      : 30px;
+        border-radius: 15px;
+        box-shadow   : 0px 10px 20px rgba(55, 55, 89, 0.08);
+
+        h4 {
+            font-size: 22px;
+        }
+
+        .port-icon {
+            height         : 72px;
+            width          : 72px;
+            border-radius  : 50%;
+            border         : 1px solid $primary;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            font-size      : 36px;
+            margin-right   : 30px;
+            color          : $primary
+        }
+
+        p {
+            margin-bottom: 0px;
+
+            a {
+                color: $primary
+            }
+        }
+    }
+}
+
+.portfolio_img {
+    img {
+        background   : #fff;
+        padding      : 20px;
+        border-radius: 15px;
+        box-shadow   : 0px 10px 20px rgba(55, 55, 89, 0.08);
+    }
+}

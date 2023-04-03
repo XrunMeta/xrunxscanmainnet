@@ -1,0 +1,247 @@
+.header {
+    padding   : 10px 0px;
+    position  : fixed;
+    top       : 0;
+    left      : 240px;
+    right     : 0;
+    z-index   : 02;
+    transition: all 0.3s ease-in;
+    background: $body-bg;
+
+    // border-bottom: 1px solid $border-color;
+    @include respond('phone-land') {
+        left: 0;
+    }
+
+    .navbar {
+        padding: 0px;
+    }
+
+    .brand-logo {
+        display: none;
+
+        @include respond('phone-land') {
+            display: block;
+        }
+    }
+
+
+
+
+    &.landing_page {
+        left      : 0;
+        padding   : 20px 0px;
+        background: $white;
+        box-shadow: 0px 10px 20px rgba(55, 55, 89, 0.08);
+    }
+}
+
+button.navbar-toggler {
+    position : absolute;
+    right    : 0;
+    min-width: 55px;
+    top      : 2px;
+}
+
+
+.navbar-brand {
+    margin-right: 20px;
+    display     : flex;
+    align-items : center;
+
+    img {
+        max-width: 30px;
+    }
+
+
+
+    span {
+        // color      : $white;
+        font-weight: 700;
+        margin-left: 10px;
+        font-size  : 24px;
+    }
+}
+
+.header_auth {
+    .btn {
+        margin-left: 10px;
+
+        @include respond('tab-port') {
+            padding  : 7px;
+            min-width: 110px;
+        }
+
+        @include respond('tab-port') {
+            display: none;
+        }
+    }
+}
+
+
+.navbar-nav {
+    @include respond('tab-port') {
+        background   : $body-bg;
+        margin-top   : 10px;
+        border-radius: 10px;
+        padding      : 10px 0px;
+    }
+
+    .nav-item {
+        .nav-link {
+            padding    : 0 20px;
+            // color: $white!important;
+            font-weight: 500;
+
+            // opacity: 0.75;
+            @include respond('tab-port') {
+                padding: 10px 20px !important;
+            }
+
+            @include respond('tab-land') {
+                padding: 10px 15px !important;
+            }
+
+            &:hover,
+            &:focus,
+            &.active {
+                color: $primary;
+            }
+        }
+
+        // &.active {
+        //     .nav-link {
+        //         color: $white !important;
+        //         @include respond('tab-port') {
+        //             color: $white !important;
+        //         }
+        //     }
+        // }
+    }
+}
+
+
+
+.profile_log {
+    cursor: pointer;
+
+    .user {
+        display    : flex;
+        align-items: center;
+
+        .thumb {
+            height       : 35px;
+            width        : 35px;
+            border-radius: 50px;
+            border       : 1px solid rgba(255, 255, 255, 0.08);
+            display      : inline-block;
+            margin-right : 15px;
+            background   : $primary;
+            color        : $white;
+            text-align   : center;
+            padding      : 4px 0;
+
+            @include respond('tab-land') {
+                margin-right: 0px;
+            }
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .name {
+            margin-right: 30px;
+            font-size   : 18px;
+            font-weight : 500;
+            color       : $dark;
+
+            @include respond('tab-land') {
+                display: none;
+            }
+
+            @include custommq($min: 1200px, $max: 1350px) {
+                display: none;
+            }
+        }
+
+        .arrow {
+            color: $dark;
+
+            i {
+                font-weight: bold;
+                font-size  : 16px;
+                line-height: 16px;
+                margin-top : 6px;
+                display    : inline-block;
+
+                display: none;
+            }
+
+            @include respond('phone') {
+                display: none;
+            }
+        }
+    }
+
+    .dropdown-menu {
+        border          : 0px;
+        padding         : 0px;
+        margin          : 0px;
+        top             : 50px;
+        width           : 220px;
+        box-shadow      : 0 36px 48px rgba($color: #1b1994, $alpha: 0.08);
+        border-radius   : 5px;
+        background-color: $white;
+
+        .dropdown-item {
+            padding      : 15px 20px;
+            border-bottom: 1px solid $border-color;
+            font-size    : 16px;
+            color        : $body-color;
+            font-weight  : 500;
+
+            &:last-child {
+                border: 0px;
+            }
+
+            &.logout {
+                color: $danger;
+
+                i {
+                    color: $danger;
+                }
+            }
+
+            i {
+                margin-right: 10px;
+                font-size   : 22px;
+                color       : $primary;
+                font-weight : bold;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                i {
+                    color: $white;
+                }
+
+                color     : $white;
+                background: $primary;
+            }
+
+            &.active {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.header-search {
+    @include respond('phone') {
+        form {
+            max-width: 200px;
+        }
+    }
+}

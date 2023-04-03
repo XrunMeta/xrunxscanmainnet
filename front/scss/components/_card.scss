@@ -1,0 +1,59 @@
+.card {
+  border       : 0px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow   : 0px 10px 20px rgba(55, 55, 89, 0.08);
+  background   : $white;
+
+  &-header {
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    border-bottom  : 1px solid $border-color;
+    background     : $white;
+    padding        : 20px;
+
+    border-top-left-radius : 15px !important;
+    border-top-right-radius: 15px !important;
+
+    // margin      : 0px 35px;
+    // @include respond("desktop") {
+    //   padding: 30px;
+    // }
+    // @include custommq($min: 1200px, $max: 1350px) {
+    //   padding: 30px 0px;
+    // }
+  }
+
+  &-title {
+    font-size    : 18px;
+    margin-bottom: 0px;
+    // color: #ffffff;
+    font-weight  : 500;
+  }
+
+  &.transparent {
+    background: transparent;
+    box-shadow: none;
+
+    .card-header,
+    .card-body {
+      background: transparent;
+
+    }
+  }
+
+  .card-body {
+    padding      : 20px;
+    background   : $white;
+    border-radius: 15px;
+
+    // @include respond("desktop") {
+    //   padding: 30px;
+    // }
+
+    // @include custommq($min: 1200px, $max: 1350px) {
+    //   padding: 30px 0px !important;
+    // }
+  }
+}

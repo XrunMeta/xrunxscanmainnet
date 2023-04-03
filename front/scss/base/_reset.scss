@@ -1,0 +1,94 @@
+@import "../vendor/animate/animate.min.css";
+@import "../vendor/waves/waves.min.css";
+
+* {
+    outline: none;
+    padding: 0;
+
+    &::after {
+        margin : 0;
+        padding: 0;
+    }
+
+    &::before {
+        margin : 0;
+        padding: 0;
+    }
+}
+
+body {
+    font-family   : $font-family-base;
+    font-size     : 16px;
+    color         : $body-color;
+    line-height   : 1.5rem;
+    // font-weight: 300;
+    background    : $body-bg;
+    overflow-x    : hidden;
+
+    &.dashboard {
+        &:before {
+            content   : "";
+            height    : 300px;
+            top       : 0;
+            left      : 0;
+            width     : 100%;
+            position  : fixed;
+            z-index   : -9;
+            background: $primary;
+        }
+    }
+}
+
+#main-wrapper {
+    opacity   : 0;
+    transition: all 0.25s ease-in;
+    overflow  : hidden;
+    position  : relative;
+    z-index   : 1;
+    // height: 100vh;
+    margin-top: 80px;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.content-body {
+    margin-left  : 240px;
+    margin-top   : 15px;
+    margin-bottom: 0px;
+
+    @include respond('phone-land') {
+        margin-left  : 0px;
+        margin-bottom: 50px;
+    }
+}
+
+ul {
+    padding: 0;
+    margin : 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color          : $body-color;
+    text-decoration: none;
+    outline        : none;
+
+    &:hover,
+    &:focus,
+    &.active {
+        text-decoration: none;
+        outline        : none;
+        color          : $primary;
+    }
+}
+
+
+b,
+strong {
+    color: $headings-color;
+}
